@@ -1,0 +1,42 @@
+p, figure, ul, li, body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header {
+  background-color: black;
+  text-align: center;
+}
+header a {
+  color: white;
+  padding: 20px 30px;
+  display: inline-block;
+}
+header a.active {
+  color: yellow;
+}
+
+main {
+  width: 80%;
+  margin: 60px auto;
+}
+
+.insert {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  background: yellow;
+  padding: 30px;
+  border-radius: 16px;
+}
+.insert textarea, .insert input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+.insert textarea {
+  height: 200px;
+}

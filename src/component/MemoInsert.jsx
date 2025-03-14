@@ -32,10 +32,15 @@ function MemoInsert({data,setData}) {
 
         const entries = Object.fromEntries(formdata)
         
-        axios.post("http://localhost:3000/memo",entries)
-        .then(res=>{
+        axios({
+                method:"post",
+                url: `${process.env.REACT_APP_APIURL}/memo`,
+                headers: { "Content-Type": "application/json" },
+                data:JSON.stringify(entries)
+          })
+          .then(res=>{
             setData(res.data);
-        })
+          })
 
 
         e.target.reset();
